@@ -1,6 +1,6 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { CounterService } from '../counter.service';
+import { CounterService } from './counter.service';
 
 @Component({
   standalone: true,
@@ -13,7 +13,6 @@ import { CounterService } from '../counter.service';
 export class CounterComponent {
   
   private readonly countService = inject(CounterService)
-  // count$ = this.countService.count$;
 
   count = this.countService.count
   

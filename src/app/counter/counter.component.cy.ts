@@ -1,16 +1,9 @@
-import { CounterService } from "../counter.service"
+import { CounterService } from "./counter.service"
 import { CounterComponent } from "./counter.component"
 
 describe('CounterComponent', () => {
     it('can mount and display an initial value of 0', () => {
-        cy.mount(CounterComponent, {
-            providers: [
-                {
-                    provide: CounterService,
-                    useValue: { count: null }
-                }
-            ]
-        })
+        cy.mount(CounterComponent)
         cy.get('#count').contains(0)
     })
 
